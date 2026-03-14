@@ -1,0 +1,11 @@
+#include "eliuds_eggs.h"
+
+unsigned int egg_count(int egg){
+    unsigned int count = 0;
+    int size = sizeof(int) * 8;
+    for(int i = 0; i < size; i++){
+        if(egg % 2 != 0)count++;
+        egg = egg >> 1;
+    }
+    return count;
+}
